@@ -53,7 +53,7 @@ Investigate the minting function in the UniswapV2Pair contract. When depositing 
 
 > Solution
 
-The intention behind this specific formula is to maintain the constant product invariant. The constant product invariant ensures the product of the reserves of the two tokens in a liquidity pool must remain constant all the time, which can minimizing slippage for traders. 
+The intention behind this specific formula is to maintain the constant product invariant, which ensures the product of the reserves of the two tokens in the liquidity pool remain constant all the time, which can minimizing slippage for traders. 
 
 ## Problem 5
 What is a sandwich attack, and how might it impact you when initiating a swap?
@@ -61,6 +61,6 @@ What is a sandwich attack, and how might it impact you when initiating a swap?
 > Solution
 
 
-A sandwich attack is a type of front-running attack that can occur in decentralized exchanges. In a sandwich attack, attacker places two transactions around a target transaction in quick succession, aiming to exploit the price movement caused by the target transaction, which can let the attacker profit.
+A sandwich attack is a type of front-running attack that occur in decentralized exchanges. In a sandwich attack, attacker places two transactions around a target transaction in quick succession, aiming to exploit the price movement caused by the target transaction, which can let the attacker profit.
 
 Sandwich attack can make me paying higher prices, acquiring fewer assets, experiencing slower transaction speeds, and facing increased transaction costs when initiating a swap. 
