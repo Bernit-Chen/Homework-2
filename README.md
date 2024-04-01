@@ -46,10 +46,14 @@ Please examine the mint function in the UniswapV2Pair contract. Upon initial liq
 
 > Solution
 
+The rationale behind subtracting a minimum liquidity upon initial minting is to prevent potential front-running attacks and to ensure that the liquidity added meets certain criteria.
+
 ## Problem 4
 Investigate the minting function in the UniswapV2Pair contract. When depositing tokens (not for the first time), liquidity can only be obtained using a specific formula. What is the intention behind this?
 
 > Solution
+
+
 
 ## Problem 5
 What is a sandwich attack, and how might it impact you when initiating a swap?
