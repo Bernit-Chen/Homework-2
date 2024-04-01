@@ -35,9 +35,9 @@ What is slippage in AMM, and how does Uniswap V2 address this issue? Please illu
 
 > Solution
 
-Slippage is the difference between the expected price and the actual price of a trade , which is primarily caused by volatility and other factors like the size of the trade and the speed of the chain.
+Slippage is the difference between the expected price and the actual price of a trade.
 
-Uniswap V2 addressed this issue by introducing a feature "constant product invariant" , which ensures that the product of the reserve amounts of the two tokens in a trading pair remains constant. When trades occur, the ratio of the reserve amounts changes to maintain this product, which in turn helps to minimize slippage. 
+Uniswap V2 addressed this issue by using "constant product invariant", which ensures the product of the reserve amounts of the two tokens in a trading pair remains constant. When trades occur, the ratio of the reserve amounts changes to maintain this product, which in turn helps to minimize slippage. 
 
 ![alt text](image.png)
 
@@ -46,17 +46,21 @@ Please examine the mint function in the UniswapV2Pair contract. Upon initial liq
 
 > Solution
 
-The rationale behind subtracting a minimum liquidity upon initial minting is to prevent potential front-running attacks and to ensure that the liquidity added meets certain criteria.
+The rationale behind subtracting a minimum liquidity upon initial minting is aim to require users to provide a minimum amount of liquidity, in order to ensure price stability, efficient trading, and to avoid market manipulation.
 
 ## Problem 4
 Investigate the minting function in the UniswapV2Pair contract. When depositing tokens (not for the first time), liquidity can only be obtained using a specific formula. What is the intention behind this?
 
 > Solution
 
-
+The intention behind this specific formula is to maintain the constant product invariant. The constant product invariant ensures the product of the reserves of the two tokens in a liquidity pool must remain constant all the time, which can minimizing slippage for traders. 
 
 ## Problem 5
 What is a sandwich attack, and how might it impact you when initiating a swap?
 
 > Solution
 
+
+A sandwich attack is a type of front-running attack that can occur in decentralized exchanges. In a sandwich attack, attacker places two transactions around a target transaction in quick succession, aiming to exploit the price movement caused by the target transaction, which can let the attacker profit.
+
+Sandwich attack can make me paying higher prices, acquiring fewer assets, experiencing slower transaction speeds, and facing increased transaction costs when initiating a swap. 
