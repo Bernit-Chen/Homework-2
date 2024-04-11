@@ -35,8 +35,9 @@ What is slippage in AMM, and how does Uniswap V2 address this issue? Please illu
 
 > Solution
 
-Slippage is the difference between the expected price and the actual price of a trade.
+Slippage is the difference between the expected price and the actual price of a trade, which is primarily caused by volatility and other factors like the size of the trade and the speed of the chain. 
 
+Slippage is unavoidable, but it can be minimized through Slippage tolerance.
 Uniswap V2 addressed this issue by using "constant product invariant", which ensures the product of the reserve amounts of the two tokens in a trading pair remains constant. When trades occur, the ratio of the reserve amounts changes to maintain this product, which in turn helps to minimize slippage. 
 
 ![alt text](image-1.png)
