@@ -39,7 +39,7 @@ Slippage is the difference between the expected price and the actual price of a 
 
 Uniswap V2 addressed this issue by using "constant product invariant", which ensures the product of the reserve amounts of the two tokens in a trading pair remains constant. When trades occur, the ratio of the reserve amounts changes to maintain this product, which in turn helps to minimize slippage. 
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 ## Problem 3
 Please examine the mint function in the UniswapV2Pair contract. Upon initial liquidity minting, a minimum liquidity is subtracted. What is the rationale behind this design?
